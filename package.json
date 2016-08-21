@@ -1,0 +1,17 @@
+{
+  "name": "ssh-executor",
+  "version": "1.0.0",
+  "scripts": {
+  	"install": "node-gyp rebuild"
+  },
+  "gypfile": true,
+  "description": "SSH command executor for Node.js written in C++ using libssh2",
+  "main": "index.js",
+  "keywords": ["libssh2", "ssh", "ssh-executor", "C++"],
+  "author": "Pavel Bakharev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakharevpavel/ssh-executor.git"
+  }
+}
