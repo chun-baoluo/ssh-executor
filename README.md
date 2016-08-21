@@ -10,7 +10,7 @@ You need to have libssh2 installed on your computer:
 $ sudo apt-get install libssh2-1-dev
 ```
 
-Also, make sure Node-gyp module is installed (in order to compile C++ code into Node addon):
+Also, make sure Node-gyp module is installed (in order to compile C++ code into a Node addon):
 
 ```sh
 $ npm install -g node-gyp
