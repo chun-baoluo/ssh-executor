@@ -82,6 +82,9 @@ void connect(const FunctionCallbackInfo<Value>& args) {
             nh = libssh2_knownhost_init(session);
             while ((rc = libssh2_userauth_password(session, *username, *password)) == LIBSSH2_ERROR_EAGAIN);
         }
+        if(rc < 0) {
+            error = "Failed to connect. Login data may be wrong.";
+        }
     }
 
     // Callback
