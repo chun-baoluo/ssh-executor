@@ -134,9 +134,11 @@ void exec(const FunctionCallbackInfo<Value>& args) {
         }
     }
 
-    // removing new string symbol
+    // Removing space and new string symbols from the end of the data string
     std::string result(buffer);
-    result = result.substr(0, result.size() - 1);
+    while(result.size() > 1 && (result.at(result.size() - 1) == ' ' || result.at(result.size() - 1) == '\n')) {
+        result = result.substr(0, result.size() - 1);
+    }
 
     // Callback
     Local<Function> cb = Local<Function>::Cast(args[1]);
