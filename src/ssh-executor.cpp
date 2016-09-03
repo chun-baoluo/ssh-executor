@@ -100,7 +100,7 @@ void connect(const FunctionCallbackInfo<Value>& args) {
 
 void exec(const FunctionCallbackInfo<Value>& args) {
     char *error = "";
-    char buffer[0x4000];
+    char buffer[0x4000] = "";
     Isolate* isolate = args.GetIsolate();
     
     if(connected == true) {
@@ -115,7 +115,7 @@ void exec(const FunctionCallbackInfo<Value>& args) {
             waitsocket(sock, session);
         }
         
-        if( rc != 0 ) {
+        if(rc != 0) {
             error = "Error while executing command.";
         } else {
             for( ;; ) {
@@ -123,7 +123,7 @@ void exec(const FunctionCallbackInfo<Value>& args) {
                 
                 do {
                     rc = libssh2_channel_read(channel, buffer, sizeof(buffer));
-                } while( rc > 0 );
+                } while(rc > 0);
 
                 if(rc == LIBSSH2_ERROR_EAGAIN) {
                     waitsocket(sock, session);
