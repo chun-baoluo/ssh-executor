@@ -1,16 +1,9 @@
 #include <libssh2.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <sys/time.h>
-#include <sys/types.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <stdio.h>
-#include <ctype.h>
 #include <string>
+
 #include <node.h>
-#include <node_buffer.h>
 #include <v8.h>
 
 using namespace v8;
