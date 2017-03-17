@@ -1,6 +1,6 @@
 {
   "name": "ssh-executor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
   	"install": "node-gyp rebuild"
   },
@@ -12,6 +12,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bakharevpavel/ssh-executor.git"
+    "url": "git+https://github.com/star-collector/ssh-executor.git"
   }
 }
